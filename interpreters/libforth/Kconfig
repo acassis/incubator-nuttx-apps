@@ -1,0 +1,26 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config INTERPRETERS_LIBFORTH
+	bool "Forth Interpreter"
+	default n
+	---help---
+		This is a Forth interpreter in portable C99
+
+if INTERPRETERS_LIBFORTH
+
+config INTERPRETER_LIBFORTH_PRIORITY
+	int "Forth interpreter priority"
+	default 100
+	---help---
+		Task priority of the Forth interpreter main task
+
+config INTERPRETER_LIBFORTH_STACKSIZE
+	int "Forth interpreter stack size"
+	default 4096
+	---help---
+		Size of the stack allocated for the Forth interpreter main task
+
+endif

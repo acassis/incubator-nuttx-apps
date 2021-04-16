@@ -1,0 +1,3 @@
+ifneq ($(CONFIG_INTERPRETERS_LIBFORTH),)
+CONFIGURED_APPS += $(APPDIR)/interpreters/libforth
+endif
